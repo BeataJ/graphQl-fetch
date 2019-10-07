@@ -16,5 +16,10 @@ fetch("https://countries.trevorblades.com/", {
 })
   .then(res => res.json())
   .then(data => {
-    console.log(data.data.continents);
+    data.data.continents.forEach(continent => {
+      const option = document.createElement('option');
+      option.value = continent.code;
+      option.innerText = continent.name;
+      continentSelect.append(option);
+    });
   });
