@@ -1,3 +1,5 @@
+const continentSelect = document.getElementById('continent-select');
+
 fetch("https://countries.trevorblades.com/", {
   method: "POST",
   headers: { "Content-type": "application/json" },
